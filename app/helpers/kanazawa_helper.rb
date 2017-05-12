@@ -1,0 +1,2 @@
+module KanazawaHelper
+end

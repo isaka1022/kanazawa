@@ -1,0 +1,2 @@
+class KanazawaController < ApplicationController
+end
