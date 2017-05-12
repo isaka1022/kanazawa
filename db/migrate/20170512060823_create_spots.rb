@@ -4,7 +4,7 @@ class CreateSpots < ActiveRecord::Migration
       t.string :name
       t.text  :address
       t.time :start_time
-      t_time :last_admission_time
+      t.time :last_admission_time
       t.time :end_time
       t.integer :fee
       t.boolean :parking

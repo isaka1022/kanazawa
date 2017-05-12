@@ -1,0 +1,29 @@
+Searching 153 files for "default_locale"
+
+/Users/AMANE/projects/kanazawa/config/application.rb:
+   20      # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+   21      # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+   22:     # config.i18n.default_locale = :de
+   23  
+   24      # Do not swallow errors in after_commit/after_rollback callbacks.
+
+/Users/AMANE/projects/kanazawa/config/environments/production.rb:
+   66  
+   67    # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+   68:   # the I18n.default_locale when a translation cannot be found).
+   69    config.i18n.fallbacks = true
+   70  
+
+2 matches across 2 files
+
+
+Searching 153 files for "default_locate"
+
+/Users/AMANE/projects/kanazawa/config/application.rb:
+    9  module Kanazawa
+   10    class Application < Rails::Application
+   11:     config.i18n.default_locale = :ja
+   12      # Settings in config/environments/* take precedence over those specified here.
+   13      # Application configuration should go into files in config/initializers
+
+1 match in 1 file
