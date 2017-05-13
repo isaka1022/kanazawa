@@ -1,1 +1,4 @@
 Top Page
+<% @spots.each do |spot| %>
+<%= link_to "#{spot.name}", "spots/#{spot.id}" %>
+<%end%>

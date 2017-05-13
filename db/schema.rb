@@ -11,18 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170513033015) do
+ActiveRecord::Schema.define(version: 20170513091744) do
 
   create_table "spots", force: :cascade do |t|
-    t.string   "name",                limit: 255
-    t.text     "address",             limit: 65535
+    t.string   "name",                 limit: 255
+    t.text     "address",              limit: 65535
     t.time     "start_time"
     t.time     "last_admission_time"
     t.time     "end_time"
-    t.integer  "fee",                 limit: 4
+    t.integer  "fee",                  limit: 4
     t.boolean  "parking"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.string   "picture_file_name",    limit: 255
+    t.string   "picture_content_type", limit: 255
+    t.integer  "picture_file_size",    limit: 4
+    t.datetime "picture_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

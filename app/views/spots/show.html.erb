@@ -1,0 +1,14 @@
+<div class="row form user_profile">
+  <div class="col-lg-12">
+    <%= image_tag @spot.picture.url(:medium) %>
+    <h2>
+      <span><%= "#{@spot.name}" %></span><br/>
+      <span><%= "#{@spot.address}" %></span><br />
+      <span><%= "#{@spot.start_time}" %></span><br />
+      <span><%= "#{@spot.last_admission_time}" %></span><br />
+      <span><%= "#{@spot.end_time}" %></span><br />
+      <span><%= "#{@spot.fee}" %></span><br />
+      <span><%= "#{@spot.parking}" %></span><br />
+    </h2>
+  </div>
+</div>
