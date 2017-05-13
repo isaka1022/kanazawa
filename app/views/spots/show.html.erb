@@ -9,6 +9,14 @@
       <span><%= "#{@spot.end_time}" %></span><br />
       <span><%= "#{@spot.fee}" %></span><br />
       <span><%= "#{@spot.parking}" %></span><br />
-    </h2>
+      <span><%= link_to "この観光地の評価をする", new_spot_review_path(@spot.id) %>
+    </h2><br/>
+    ここから下はレビュー
+      <% @spot.reviews.each do |review| %>
+        <li><%review.user.nickname %>さんより<br />
+            評価:<%= review.rate %><br />
+            コメント:<%= review.review %><br />
+        </li>
+      <% end %>
   </div>
 </div>

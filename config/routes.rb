@@ -4,7 +4,9 @@ Rails.application.routes.draw do
    :sessions => 'users/sessions'
   }
   resources :users, only: [:show]
-  resources :spots, only: [:index, :create, :new, :show, :edit]
+  resources :spots, only: [:index, :create, :new, :show, :edit] do
+    resources :reviews, only: [:create, :new, :edit, :delete]
+  end
   root to:  "top#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
