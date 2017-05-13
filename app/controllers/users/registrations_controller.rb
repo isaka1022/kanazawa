@@ -14,26 +14,29 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/edit
   def edit
-    p "edit is called"
   end
 
   # PUT /resource
   def update
-    p "update is called"
-    p params[:user][:"birthday(1i)"]
+    p "user_params: #{user_params}"
     date = Date.new(params[:user][:"birthday(1i)"].to_i,
                     params[:user][:"birthday(2i)"].to_i,
                     params[:user][:"birthday(3i)"].to_i)
     user = User.find(current_user.id)
-    user.birthday = date
-    user.age = user_age(date)
-    user.save
+    user.update_attributes(user_params)
+    # user.birthday = date
+    # user.age = user_age(date)
+    # user.save
     redirect_to :root
   end
 
   private
   def user_age(birthday)
     p (Date.today - birthday).to_i / 365
+  end
+
+  def user_params
+    params.require(:user).permit(:family_name, :family_name_kana, :first_name, :first_name_kana, :avatar ,:nickname, :birthday, :profile, :sex)
   end
 
   # DELETE /resource
