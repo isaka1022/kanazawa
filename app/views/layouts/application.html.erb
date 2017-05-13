@@ -18,6 +18,12 @@
               <li class="logo" style="float: left">
                 <a href="/">kanazawa</a>
               </li>
+              <li class="enttry-button", style="float:right">
+                <%= link_to 'マイページ', user_path(current_user.id) %>
+              </li>
+              <li class="entry-button", style="float:right">
+                <%= link_to '登録情報を編集する', edit_user_registration_path %>
+              </li>
               <li class="entry-button" style="float:right">
                 <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
               </li>

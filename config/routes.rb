@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users,:controllers => {
- :registrations => 'users/registrations',
- :sessions => 'users/sessions'
-}
-  resource :spots, only: :index
+   :registrations => 'users/registrations',
+   :sessions => 'users/sessions'
+  }
+  resources :users, only: [:show]
+
+  resources :spots, only: [:index]
   root to:  "top#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
