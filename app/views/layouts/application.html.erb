@@ -18,6 +18,7 @@
               <li class="logo" style="float: left">
                 <a href="/">kanazawa</a>
               </li>
+              <% if user_signed_in? %>
               <li class="enttry-button", style="float:right">
                 <%= link_to 'マイページ', user_path(current_user.id) %>
               </li>
@@ -27,6 +28,7 @@
               <li class="entry-button" style="float:right">
                 <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
               </li>
+              <% end %>
             </ul>
           </div>
         </nav>
